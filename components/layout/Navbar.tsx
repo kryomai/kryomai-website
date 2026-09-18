@@ -97,7 +97,7 @@ export function Navbar() {
               />
             </div>
 
-            <div className="hidden sm:block">
+            <div className="block">
               <div className="text-sm font-semibold tracking-[-0.02em] text-foreground">
                 KryomAI
               </div>
