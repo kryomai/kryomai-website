@@ -1,7 +1,6 @@
 import {
   ArrowUpRight,
   Bot,
-  BrainCircuit,
   Code2,
   Cpu,
   FlaskConical,

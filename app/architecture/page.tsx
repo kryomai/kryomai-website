@@ -5,7 +5,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   BrainCircuit,
-  Check,
   CircuitBoard,
   Cloud,
   Code2,

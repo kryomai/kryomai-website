@@ -47,11 +47,6 @@ export function Navbar() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-  // Close mobile menu after route change
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
   // Close mobile menu with Escape key
   useEffect(() => {
     function handleEscape(event: KeyboardEvent) {
@@ -89,6 +84,7 @@ export function Navbar() {
             href="/"
             className="group flex shrink-0 items-center gap-3"
             aria-label="KryomAI home"
+            onClick={() => setMobileOpen(false)}
           >
             <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-md">
               <Image
@@ -106,9 +102,7 @@ export function Navbar() {
                 KryomAI
               </div>
 
-              <div className="mt-0.5 font-mono text-[8px] uppercase tracking-[0.2em] text-muted-foreground">
-                
-              </div>
+              <div className="mt-0.5 font-mono text-[8px] uppercase tracking-[0.2em] text-muted-foreground" />
             </div>
           </Link>
 
@@ -205,6 +199,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   aria-current={active ? "page" : undefined}
+                  onClick={() => setMobileOpen(false)}
                   className={`flex items-center justify-between rounded-md px-3 py-3 text-sm transition-colors ${
                     active
                       ? "bg-surface-muted text-foreground"
@@ -222,6 +217,7 @@ export function Navbar() {
 
             <Link
               href="/intelligence-os"
+              onClick={() => setMobileOpen(false)}
               className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-accent px-4 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
             >
               Explore Intelligence OS

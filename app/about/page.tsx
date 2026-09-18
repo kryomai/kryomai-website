@@ -11,7 +11,6 @@ import {
   Lightbulb,
   Network,
   ShieldCheck,
-  Sparkles,
   Target,
 } from "lucide-react";
 
